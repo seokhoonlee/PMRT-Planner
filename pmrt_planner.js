@@ -1,5 +1,3 @@
-console.log("js is working");
-
 function applyPMRTDetails(text) {
 	var details = text.split("###");
 
@@ -27,8 +25,6 @@ function applyPMRTDetails(text) {
 			'inputArray[37].value = ' + description + ';' +
 			'inputArray[39].value = ' + sector + ';' +
 
-	console.log(script);
-
 	chrome.tabs.executeScript({
 		code: script
 	});
@@ -36,8 +32,6 @@ function applyPMRTDetails(text) {
 
 document.addEventListener('DOMContentLoaded', () => {
 	document.getElementById("pmrtDetailsButton").addEventListener("click", function(){
-		console.log("event is working")
-
 		var textarea = document.getElementById('pmrtDetailsFormControlTextarea');
 
 		var text = textarea.value;
@@ -47,20 +41,3 @@ document.addEventListener('DOMContentLoaded', () => {
 		applyPMRTDetails(text);
 	});
 });
-
-
-
-// document.getElementById("dijit_form_ValidationTextBox_4").value = "0300"
-
-/*
-3/3/2018
-0000
-0200
-Day
-4
-20
-Other, see descript
-without LAF
-EOD
-WEST
-*/
