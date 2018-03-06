@@ -1,0 +1,23 @@
+  {
+    "name": "PMRT Planner",
+    "description" : "Extension for easier PMRT planning",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+      "default_popup": "pmrt_planner.html",
+      "default_icon": "pmrt_planner_extensions.png",
+      "default_title": "PMRT Planner"
+    },
+    "commands": {
+      "_execute_browser_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+E",
+          "mac": "MacCtrl+Shift+E"
+        },
+        "description": "Opens pmrt_planner.html"
+      }
+    },
+    "permissions": [
+      "activeTab"
+    ]
+  }
